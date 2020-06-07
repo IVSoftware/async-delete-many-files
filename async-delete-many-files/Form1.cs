@@ -64,7 +64,6 @@ namespace async_delete_many_files
                     default:
                         break;
                 }
-
             }
             catch(Exception ex)
             {
@@ -74,7 +73,6 @@ namespace async_delete_many_files
             {
                 ssBusy.Release();
             }
-
         }
         private bool DeleteSingleFile(CancellationToken ct)
         {
@@ -94,7 +92,6 @@ namespace async_delete_many_files
             return false;
         }
         event EventHandler FileDeleted;
-        event EventHandler TaskBusy;
 
         private void TaskNotify_FileDeleted(object sender, EventArgs e)
         {
