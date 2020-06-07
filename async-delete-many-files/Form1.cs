@@ -55,6 +55,7 @@ namespace async_delete_many_files
                         for (int i = 0; i < NUMBER_OF_FILES_TO_DELETE; i++)
                         {
                             bool cancelled = DeleteSingleFile(_cts.Token);
+                            if(cancelled) break;
                         }
                         break;
                     case 0:
